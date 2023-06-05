@@ -52,10 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Думички");
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
+        MobileAds.initialize(this, initializationStatus -> {
         });
 
         RequestConfiguration requestConfiguration = MobileAds.getRequestConfiguration()
